@@ -1,0 +1,29 @@
+<hr>{{viewTitle}}</hr>
+
+<form action="/phone" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{phone.id}}">
+    <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" class="form-control" name="fullName" placeholder="Full Name" value="{{phone.fullName}}">
+        <div class="text-danger">
+            {{phone.fullNameError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" name="email" placeholder="Email">value="{{phone.email}}">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Mobile</label>
+            <input type="text" class="form-control" name="mobile" placeholder="Mobile" value="{{phone.mobile}}">
+            <div class="text-danger">
+                {{phone.mobileError}}
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="Add" class="btn btn-info"><i class="fa-address-book-o"></i> Add </button>
+        <a class="btn btn-secondary" href="/phone/list"><i class="fa fa-list-alt"></i>View All</a>
+    </div>
+</form>
